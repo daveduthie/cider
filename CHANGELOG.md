@@ -5,11 +5,13 @@
 ### Changes
 
 * [#3127](https://github.com/clojure-emacs/cider/pull/3040): Strip all exec-opts flags (`-A` `-M` `-T` `-X`) if they exist in `cider-clojure-cli-aliases`. Also addresses a duplicate `:` in the generated `clj` command.
-* Enable `cider-enrich-classpath` by default.
 * [#3148](https://github.com/clojure-emacs/cider/pull/3148): Display error messages in multiline comment eval results, and in result overlays when `cider-show-error-buffer` is set to nil.
 * [#3149](https://github.com/clojure-emacs/cider/pull/3149): Add option `'change` to `cider-eval-result-duration`, allowing multiple eval result overlays to persist until the next change to the buffer.
 * `cider-jack-in-lein-plugins` no longer affects non-Leiningen projects.
   * Third-party packages should rely on `cider-jack-in-dependencies` instead.
+* Enable `cider-enrich-classpath` by default.
+* Deprecate `cider-jdk-src-paths` defcustom since enrich-classpath makes it redundant.
+* Deprecate `cider-resolve-java-class` function since enrich-classpath makes it redundant.
 
 ### Bugs fixed
 
