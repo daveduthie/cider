@@ -242,7 +242,8 @@ performed by `cider-annotate-completion-function'."
             :company-kind #'cider-company-symbol-kind
             :company-doc-buffer #'cider-create-doc-buffer
             :company-location #'cider-company-location
-            :company-docsig #'cider-company-docsig))))
+            :company-docsig #'cider-company-docsig
+            :exclusive 'no))))
 
 (defun cider-completion-flush-caches ()
   "Force Compliment to refill its caches.
